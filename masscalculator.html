@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <style>
+        .normal {
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+    </style>
+        <title>
+        Engineering Equations and Formula Calculator
+        </title>
+
+        <script>
+
+            function divideN()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = num1 / num2 + " kg";
+            }
+            function conversionMetricTon()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("mTon").innerHTML = "Metric ton (MT). . . . . " + (num1 / num2)/1000;
+            }
+            function conversionGram()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("gram").innerHTML = "Grams (g). . . . . " + (num1 / num2)*1000;
+            }
+            function conversionMilliGram()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("milligram").innerHTML = "Milligrams (mg). . . . . " + (num1 / num2)*1000000;
+            }
+            function conversionUsTon()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("usTon").innerHTML = "US ton (t). . . . . " + (num1 / num2)*0.00110231;
+            }
+            function conversionPound()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("pound").innerHTML = "Pounds (lb). . . . . " + (num1 / num2)*2.20462;
+            }
+            function conversionOunce()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("ounce").innerHTML = "Ounces (oz). . . . . " + (num1 / num2)*35.274;
+            }
+
+        </script>
+
+        <link rel="stylesheet" href=styles.css>
+
+    </head>
+
+    <body class="normal">
+
+      <h1 class="title">Engineering Equations and Formula Calculator</h1>
+      <h5 class="center">Solving for Mass</h5>
+      <h5 class="center">m = F / a</h5>
+
+      <h4 class="header">Inputs:</h4>
+      <h4 class="text">Force (N)</h4>
+      <h4 class="text">Mass (kg)</h4>
+      <h4 class="text">Acceleration (m/s^2)</h4>
+
+      <h4 class="units">Solving for Mass:</h4>
+
+          <form class="input">
+              Force: <input type="text" id="firstNumber" /><br>
+              acceleration: <input type="text" id="secondNumber" /><br>
+              <input type="button" onClick="divideN(); conversionMetricTon(); conversionGram(); conversionMilliGram(); conversionPound(); conversionOunce(); conversionUsTon()" Value="Solve" />
+          </form>
+
+      <h4 class="header">Solution:</h4>
+      <p class="solution">The Mass in kilograms is: <br>
+      <span id = "result"></span>
+      </p>
+
+      <h4 class="header">Other Units</h4>
+
+      <h5 class="units"><span>Imperial System</span></h5>
+      <p class="solution">
+      <span id = "mTon"></span>
+      </p>
+      <p class="solution">
+      <span id = "gram"></span>
+      </p>
+      <p class="solution">
+      <span id = "milligram"></span>
+      </p>
+
+      <h5 class="units"><span>English Engineering Units</span></h5>
+      <p class="solution">
+      <span id = "usTon"></span>
+      </p>
+      <p class="solution">
+      <span id = "pound"></span>
+      </p>
+      <p class="solution">
+      <span id = "ounce"></span>
+      </p>
+
+      <h4 class="units"><span>Change Units</span></h4>
+
+      <h4 class="center">Select to solve for different unknown value</h4>
+
+      <a href="file:///C:/Users/Will%20V/OneDrive/Desktop/forcecalculator.html" class="link">F = m / a</a>
+      <a href="file:///C:/Users/Will%20V/OneDrive/Desktop/accelerationcalculator.html" class="link">a = F / m</a>
+    </body>
+
+</html>

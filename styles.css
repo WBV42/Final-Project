@@ -1,0 +1,36 @@
+.title
+{
+    text-align: center; font-size: 24px;
+}
+.header
+{
+    font-family: "Times New Roman", Times, serif; text-decoration: underline; text-indent: 20%; font-size: 120%;
+}
+.text
+{
+    font-family: "Times New Roman", Times, serif; text-align: center; font-size: 18px;
+}
+.input
+{
+    text-align: center;
+}
+.center
+{
+    text-align: center; font-family: "Times New Roman", Times, serif; font-style: italic;
+}
+body
+{
+    background-image: url(https://cdn.wallpapersafari.com/28/77/3EBmDC.jpg); background-size: 100% 200%;
+}
+.solution
+{
+    font-size: 15px; text-align: center; font-weight: bold;
+}
+.units
+{
+    padding: 5px; background-color:#4683c3; color:white; font-size: 15px; text-align: center; text-decoration: underline; font-weight: bold;
+}
+.link
+{
+    text-align: center; display: block; color:black;
+}
