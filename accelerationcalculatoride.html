@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <style>
+        .normal {
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+    </style>
+        <title>
+        Engineering Equations and Formula Calculator
+        </title>
+
+        <script>
+
+            function divideN()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = num1 / num2 + " m/s^2";
+            }
+            function conversionGal()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("gal").innerHTML ="Gals. . . . . " + (num1 / num2)*0.01;
+            }
+            function conversionFeetPerSecSquared()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("feetpersec2").innerHTML ="Feet per Second Squared (ft/s^2). . . . . " + (num1 / num2)*0.3048;
+            }
+
+        </script>
+
+        <link rel="stylesheet" href=styles.css>
+
+    </head>
+
+    <body class="normal">
+
+      <h1 class="title">Engineering Equations and Formula Calculator</h1>
+      <h5 class="center">Solving for Acceleration</h5>
+      <h5 class="center">a = F / m</h5>
+
+      <h4 class="header">Inputs:</h4>
+      <h4 class="text">Force (N)</h4>
+      <h4 class="text">Mass (kg)</h4>
+      <h4 class="text">Acceleration (m/s^2)</h4>
+
+      <h4 class="units">Solving for Acceleration:</h4>
+
+          <form class="input">
+              force: <input type="text" id="firstNumber" /><br>
+              mass: <input type="text" id="secondNumber" /><br>
+              <input type="button" onClick="divideN(); conversionGal(); conversionFeetPerSecSquared()" Value="Solve" />
+          </form>
+
+      <h4 class="header">Solution:</h4>
+      <p class="solution">The Acceleration in m/s^2 is: <br>
+      <span id = "result"></span>
+      </p>
+
+      <h4 class="header">Other Units</h4>
+      <h5 class="units"><span>Imperial System</span></h5>
+      <p class="solution">
+      <span id = "gal"></span>
+      </p>
+
+      <h5 class="units"><span>English Engineering Units</span></h5>
+      <p class="solution">
+      <span id = "feetpersec2"></span>
+      </p>
+
+      <h4 class="units"><span>Change Units</span></h4>
+      <h4 class="center">Select to solve for different unknown value</h4>
+      <a href="https://a6abf386-03aa-487a-9bcd-f378bbf9a542-ide.cs50.xyz:8080/forcecalculator.html" class="link">F = m / a</a>
+      <a href="https://a6abf386-03aa-487a-9bcd-f378bbf9a542-ide.cs50.xyz:8080/masscalculator.html" class="link">m = F / a</a>
+
+      <
+    </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <style>
+        .normal {
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+    </style>
+        <title>
+        Engineering Equations and Formula Calculator
+        </title>
+
+        <script>
+
+            function multiplyN()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = num1 * num2 + " N";
+            }
+            function conversionMega()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("megaNewton").innerHTML = "Meganewtons (MN). . . . . " + (num1 * num2 / 1000000);
+            }
+            function conversionKilo()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("kiloNewton").innerHTML = "Kilonewtons (kN). . . . . " + (num1 * num2 / 1000);
+            }
+            function conversionKip()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("kip").innerHTML = "kip-force (kipf). . . . . " + (num1 * num2 / 4448.2216152548);
+            }function conversionTon()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("ton").innerHTML = "ton-force (tnf). . . . . " + (num1 * num2 / 9806.65);
+            }function conversionPound()
+            {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("pound").innerHTML = "pound-force (lbf). . . . . " + (num1 * num2 / 4.44822);
+            }
+        </script>
+
+        <link rel="stylesheet" href=styles.css>
+
+    </head>
+
+    <body class="normal">
+
+      <h1 class="title">Engineering Equations and Formula Calculator</h1>
+      <h5 class="center">Solving for Force</h5>
+      <h5 class="center">F = m x a</h5>
+
+      <h4 class="header">Inputs:</h4>
+      <h4 class="text">Force (N)</h4>
+      <h4 class="text">Mass (kg)</h4>
+      <h4 class="text">Acceleration (m/s^2)</h4>
+
+      <h4 class="units">Solving for Force:</h4>
+
+          <form class="input">
+              mass: <input type="text" id="firstNumber" /><br>
+              acceleration: <input type="text" id="secondNumber" /><br>
+              <input type="button" onClick="multiplyN(); conversionMega(); conversionKilo(); conversionKip(); conversionTon(); conversionPound()" Value="Solve" />
+          </form>
+
+      <h4 class="header">Solution:</h4>
+      <p class="solution">The Force in newtons is: <br>
+      <span id = "result"></span>
+      </p>
+
+      <h4 class="header">Other Units</h4>
+      <h5 class="units"><span>Imperial System</span></h5>
+      <p class="solution">
+      <span id = "megaNewton"></span>
+      </p>
+      <p class="solution">
+      <span id = "kiloNewton"></span>
+      </p>
+      <h5 class="units"><span>English Engineering Units</span></h5>
+      <p class="solution">
+      <span id = "kip"></span>
+      </p>
+      <p class="solution">
+      <span id = "ton"></span>
+      </p>
+      <p class="solution">
+      <span id = "pound"></span>
+      </p>
+      <h4 class="units"><span>Change Units</span></h4>
+      <h4 class="center">Select to solve for different unknown value</h4>
+      <a href="https://a6abf386-03aa-487a-9bcd-f378bbf9a542-ide.cs50.xyz:8080/masscalculator.html" class="link">m = F / a</a>
+      <a href="https://a6abf386-03aa-487a-9bcd-f378bbf9a542-ide.cs50.xyz:8080/accelerationcalculator.html" class="link">a = F / m</a>
+    </body>
+
+</html>
